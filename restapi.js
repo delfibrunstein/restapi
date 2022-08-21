@@ -70,7 +70,7 @@ app.post('/infoProfesor', (req, res) => {
             let sql2 = "INSERT INTO profesor_materia SET ?";
             const infoRelacion = {
                 id_materia: req.body.id_materia,
-                id_profesor: id
+                id_profesor: id // el id profesor lo necesito para que se me asignen los dias y bloques correspondientes para cada profesor
             };
             connection.query(sql2, infoRelacion, error => {
                 if (error) throw error;
